@@ -1,0 +1,62 @@
+# Tokscale Team Dashboard - Docker Compose
+#
+# 팀 내부 대시보드를 위한 Docker Compose 설정
+#
+# 사용법:
+#   1. .env.team 파일을 생성하고 설정을 입력합니다
+#   2. docker-compose up -d 실행
+#   3. http://localhost:3000 접속
+#
+# 자세한 설정은 docs/TEAM_DEPLOYMENT.md 참조
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: tokscale-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-tokscale}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tokscale_secret}
+      POSTGRES_DB: ${POSTGRES_DB:-tokscale}
+    volumes:
+      - tokscale_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tokscale}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - tokscale-network
+
+  # Tokscale Frontend (Next.js)
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: tokscale-frontend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-tokscale}:${POSTGRES_PASSWORD:-tokscale_secret}@postgres:5432/${POSTGRES_DB:-tokscale}
+      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+      GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET}
+      NEXT_PUBLIC_URL: ${NEXT_PUBLIC_URL:-http://localhost:3000}
+      AUTH_SECRET: ${AUTH_SECRET:-}
+      NODE_ENV: production
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    networks:
+      - tokscale-network
+
+volumes:
+  tokscale_postgres_data:
+    driver: local
+
+networks:
+  tokscale-network:
+    driver: bridge

@@ -102,6 +102,7 @@ In the age of AI-assisted development, **tokens are the new energy**. They power
 - [Pricing](#pricing)
 - [Contributing](#contributing)
   - [Development Guidelines](#development-guidelines)
+- [Team Deployment](#team-deployment)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
@@ -853,6 +854,44 @@ Contributions are welcome! Please follow these steps:
 - Add tests for new functionality
 - Update documentation as needed
 - Keep commits focused and atomic
+
+## Team Deployment
+
+Tokscale can be deployed for internal team use with a shared dashboard and leaderboard.
+
+### Quick Start for Teams
+
+**Option A: CLI Only (Simple)**
+```bash
+# One-click install for team members
+curl -fsSL https://raw.githubusercontent.com/junhoyeo/tokscale/main/scripts/install.sh | bash
+```
+
+**Option B: Full Dashboard (Recommended for 5-20 members)**
+```bash
+# Clone and deploy with Docker
+git clone https://github.com/junhoyeo/tokscale.git
+cd tokscale
+cp .env.team.example .env.team
+# Edit .env.team with your settings
+docker-compose --env-file .env.team up -d
+```
+
+### What's Included
+
+| Component | Description |
+|-----------|-------------|
+| `scripts/install.sh` | One-click CLI installer with Bun setup |
+| `docker-compose.yml` | Full stack deployment (Frontend + PostgreSQL) |
+| `.env.team.example` | Team configuration template |
+| `docs/TEAM_DEPLOYMENT.md` | Detailed deployment guide |
+
+**Requirements:**
+- Docker & Docker Compose (for dashboard)
+- GitHub OAuth App (for authentication)
+- Internal server or cloud instance
+
+For detailed instructions, see **[Team Deployment Guide](docs/TEAM_DEPLOYMENT.md)**.
 
 ## Acknowledgments
 
