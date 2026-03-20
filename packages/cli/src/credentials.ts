@@ -112,7 +112,7 @@ export function isLoggedIn(): boolean {
  * Get the API base URL
  */
 export function getApiBaseUrl(): string {
-  return process.env.PLAB_API_URL || process.env.TOKSCALE_API_URL || "https://tokscale.ai";
+  return process.env.PLAB_API_URL || process.env.TOKSCALE_API_URL || "https://plab-tokens.vercel.app";
 }
 
 /**

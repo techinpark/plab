@@ -1,0 +1,43 @@
+{
+  "name": "plabtokens",
+  "version": "1.0.22",
+  "description": "AI Token Usage Tracker & Leaderboard CLI — Track, visualize, and compete on AI coding assistant token usage across Claude Code, Cursor, OpenCode, Codex, and Gemini.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "plabtokens": "./bin.js",
+    "plab": "./bin.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techinpark/tokscale.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techinpark/tokscale/issues"
+  },
+  "homepage": "https://plab-tokens.vercel.app",
+  "keywords": [
+    "plab",
+    "token",
+    "tracker",
+    "ai",
+    "claude",
+    "openai",
+    "gemini",
+    "cursor",
+    "cli",
+    "leaderboard"
+  ],
+  "dependencies": {
+    "@tokscale/cli": "1.0.22"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    "bin.js"
+  ]
+}
