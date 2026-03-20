@@ -246,7 +246,7 @@ export default function SettingsClient() {
             <CodeText
               style={{ backgroundColor: "var(--color-bg-subtle)" }}
             >
-              tokscale login
+              plab login
             </CodeText>{" "}
             from the CLI.
           </Description>
@@ -262,7 +262,7 @@ export default function SettingsClient() {
                 <CodeText
                   style={{ backgroundColor: "var(--color-bg-subtle)" }}
                 >
-                  tokscale login
+                  plab login
                 </CodeText>{" "}
                 to create one.
               </EmptyText>

@@ -10,7 +10,7 @@ export function BlackholeHero() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("bunx tokscale");
+    navigator.clipboard.writeText("bunx plab");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -35,13 +35,13 @@ export function BlackholeHero() {
         <LogoWrapper>
           <LogoImage
             src="/assets/hero-logo.svg"
-            alt="Tokscale Logo"
+            alt="plab Logo"
             fill
           />
         </LogoWrapper>
 
         <HeroTitle>
-          The Kardashev Scale
+          UNLIMITED POTENTIAL
           <br />
           for AI Devs
         </HeroTitle>
@@ -59,7 +59,7 @@ export function BlackholeHero() {
                 bunx&nbsp;
               </CommandPrefix>
               <CommandName>
-                tokscale
+                plab
               </CommandName>
             </CommandTextWrapper>
             <GradientSeparator />
@@ -68,10 +68,10 @@ export function BlackholeHero() {
 
         <FooterContainer>
           <StarContainer>
-            <StyledStarIcon 
-              src="/assets/github-icon.svg" 
-              alt="GitHub Star" 
-              width={24} 
+            <StyledStarIcon
+              src="/assets/github-icon.svg"
+              alt="GitHub Star"
+              width={24}
               height={24}
             />
             <StarText>
@@ -79,11 +79,11 @@ export function BlackholeHero() {
             </StarText>
           </StarContainer>
           <GitHubLink
-            href="https://github.com/junhoyeo/tokscale"
+            href="https://github.com/techinpark/plab"
             target="_blank"
             rel="noopener noreferrer"
           >
-            junhoyeo/tokscale
+            techinpark/plab
           </GitHubLink>
         </FooterContainer>
       </ContentWrapper>

@@ -3,7 +3,7 @@ import { exec } from "node:child_process";
 import type { TabType } from "../types/index.js";
 import { isNarrow, isVeryNarrow } from "../utils/responsive.js";
 
-const REPO_URL = "https://github.com/junhoyeo/tokscale";
+const REPO_URL = "https://github.com/techinpark/tokscale";
 
 function openUrl(url: string) {
   const cmd = process.platform === "darwin" ? "open" : process.platform === "win32" ? "start" : "xdg-open";

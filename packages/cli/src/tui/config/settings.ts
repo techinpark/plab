@@ -3,8 +3,8 @@ import { join } from "path";
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import type { TUIData, DailyModelBreakdown } from "../types/index.js";
 
-const CONFIG_DIR = join(homedir(), ".config", "tokscale");
-const CACHE_DIR = join(homedir(), ".cache", "tokscale");
+const CONFIG_DIR = join(homedir(), ".config", "plab");
+const CACHE_DIR = join(homedir(), ".cache", "plab");
 const CONFIG_FILE = join(CONFIG_DIR, "settings.json");
 const LEGACY_CONFIG_FILE = join(CONFIG_DIR, "tui-settings.json");
 const CACHE_FILE = join(CACHE_DIR, "tui-data-cache.json");

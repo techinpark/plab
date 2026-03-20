@@ -10,13 +10,13 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/junhoyeo/tokscale?color=0073FF&labelColor=black&logo=github&style=flat-square)](https://github.com/junhoyeo/tokscale/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/techinpark/tokscale?color=0073FF&labelColor=black&logo=github&style=flat-square)](https://github.com/techinpark/tokscale/releases)
 [![npm Downloads](https://img.shields.io/npm/dt/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://www.npmjs.com/package/tokscale)
-[![GitHub Contributors](https://img.shields.io/github/contributors/junhoyeo/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/junhoyeo/tokscale/graphs/contributors)
-[![GitHub Forks](https://img.shields.io/github/forks/junhoyeo/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/junhoyeo/tokscale/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/junhoyeo/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/junhoyeo/tokscale/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/junhoyeo/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/junhoyeo/tokscale/issues)
-[![License](https://img.shields.io/badge/license-MIT-white?labelColor=black&style=flat-square)](https://github.com/junhoyeo/tokscale/blob/master/LICENSE)
+[![GitHub Contributors](https://img.shields.io/github/contributors/techinpark/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/techinpark/tokscale/graphs/contributors)
+[![GitHub Forks](https://img.shields.io/github/forks/techinpark/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/techinpark/tokscale/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/techinpark/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/techinpark/tokscale/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/techinpark/tokscale?color=0073FF&labelColor=black&style=flat-square)](https://github.com/techinpark/tokscale/issues)
+[![License](https://img.shields.io/badge/license-MIT-white?labelColor=black&style=flat-square)](https://github.com/techinpark/tokscale/blob/master/LICENSE)
 
 [🇺🇸 English](README.md) | [🇰🇷 한국어](README.ko.md) | [🇯🇵 日本語](README.ja.md) | [🇨🇳 简体中文](README.zh-cn.md)
 
@@ -151,7 +151,7 @@ bunx tokscale@latest
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/junhoyeo/tokscale.git
+git clone https://github.com/techinpark/tokscale.git
 cd tokscale
 
 # Bunをインストール（まだインストールしていない場合）
@@ -842,13 +842,13 @@ Tokscaleは[LiteLLMの価格データベース](https://github.com/BerriAI/litel
 ## ライセンス
 
 <p align="center">
-  <a href="https://github.com/junhoyeo">
+  <a href="https://github.com/techinpark">
     <img src=".github/assets/labtocat-on-spaceship.png" width="540">
   </a>
 </p>
 
 <p align="center">
-  <strong>MIT © <a href="https://github.com/junhoyeo">Junho Yeo</a></strong>
+  <strong>MIT © <a href="https://github.com/techinpark">Junho Yeo</a></strong>
 </p>
 
-このプロジェクトが興味深いと感じたら、**スターを付けてください ⭐** または[GitHubでフォロー](https://github.com/junhoyeo)して旅に参加してください（すでに1.1k以上が乗船中）。私は24時間コーディングし、定期的に驚くべきものを出荷しています—あなたのサポートは無駄になりません。
+このプロジェクトが興味深いと感じたら、**スターを付けてください ⭐** または[GitHubでフォロー](https://github.com/techinpark)して旅に参加してください（すでに1.1k以上が乗船中）。私は24時間コーディングし、定期的に驚くべきものを出荷しています—あなたのサポートは無駄になりません。

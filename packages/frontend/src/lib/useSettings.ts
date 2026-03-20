@@ -12,7 +12,7 @@ const DEFAULT_SETTINGS: Settings = {
   paletteName: DEFAULT_PALETTE,
 };
 
-const STORAGE_KEY = "tokscale-settings";
+const STORAGE_KEY = "plab-settings";
 
 function getStoredSettings(): Settings {
   if (typeof window === "undefined") return DEFAULT_SETTINGS;

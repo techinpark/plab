@@ -272,7 +272,7 @@ export function DataInput({ onDataLoaded }: DataInputProps) {
         <Description>
           Paste JSON from{" "}
           <CodeSnippet>
-            tokscale graph
+            plab graph
           </CodeSnippet>{" "}
           command, or load sample data.
         </Description>
@@ -352,15 +352,15 @@ export function DataInput({ onDataLoaded }: DataInputProps) {
         </InstructionsTitle>
         <InstructionsList>
           <ListItem>
-            Install tokscale:{" "}
+            Install plab:{" "}
             <SmallCodeSnippet>
-              bunx tokscale
+              bunx plab
             </SmallCodeSnippet>
           </ListItem>
           <ListItem>
             Run the graph command:{" "}
             <SmallCodeSnippet>
-              tokscale graph
+              plab graph
             </SmallCodeSnippet>
           </ListItem>
           <ListItem>Copy the JSON output and paste it above</ListItem>

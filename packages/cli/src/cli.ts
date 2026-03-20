@@ -1,8 +1,8 @@
 #!/usr/bin/env bun
 /**
- * Tokscale CLI
+ * plab CLI
  * Display OpenCode, Claude Code, Codex, Gemini, and Cursor usage with dynamic width tables
- * 
+ *
  * All heavy computation is done in the native Rust module.
  */
 
@@ -95,7 +95,7 @@ function showTUIUnavailableMessage(): void {
   console.log(pc.gray("  OpenTUI's native modules are not compatible with Node.js."));
   console.log();
   console.log(pc.white("  Options:"));
-  console.log(pc.gray("  • Use 'bunx tokscale' instead of 'npx tokscale'"));
+  console.log(pc.gray("  • Use 'bunx plab' instead of 'npx plab'"));
   // console.log(pc.gray("  • Use '--light' flag for legacy CLI table output"));
   console.log(pc.gray("  • Use '--json' flag for JSON output"));
   console.log();
@@ -206,8 +206,8 @@ async function main() {
   const program = new Command();
 
   program
-    .name("tokscale")
-    .description("Tokscale - Track AI coding costs across OpenCode, Claude Code, Codex, Gemini, Cursor, and Amp")
+    .name("plab")
+    .description("plab - Track AI coding costs across OpenCode, Claude Code, Codex, Gemini, Cursor, and Amp")
     .version(pkg.version);
 
   program
@@ -308,7 +308,7 @@ async function main() {
   program
     .command("wrapped")
     .description("Generate Wrapped shareable image")
-    .option("--output <file>", "Output file path (default: tokscale-<year>-wrapped.png)")
+    .option("--output <file>", "Output file path (default: plab-<year>-wrapped.png)")
     .option("--year <year>", "Year to generate (default: current year)")
     .option("--opencode", "Include only OpenCode data")
     .option("--claude", "Include only Claude Code data")
@@ -328,14 +328,14 @@ async function main() {
 
   program
     .command("login")
-    .description("Login to Tokscale (opens browser for GitHub auth)")
+    .description("Login to plab (opens browser for GitHub auth)")
     .action(async () => {
       await login();
     });
 
   program
     .command("logout")
-    .description("Logout from Tokscale")
+    .description("Logout from plab")
     .action(async () => {
       await logout();
     });
@@ -353,7 +353,7 @@ async function main() {
 
   program
     .command("submit")
-    .description("Submit your usage data to Tokscale")
+    .description("Submit your usage data to plab")
     .option("--opencode", "Include only OpenCode data")
     .option("--claude", "Include only Claude Code data")
     .option("--codex", "Include only Codex CLI data")
@@ -581,7 +581,7 @@ async function showModelReport(options: FilterOptions & DateFilterOptions & { be
     const credentials = loadCursorCredentials();
     if (!credentials) {
       console.log(pc.red("\n  Error: Cursor authentication required."));
-      console.log(pc.gray("  Run 'tokscale cursor login' to authenticate with Cursor.\n"));
+      console.log(pc.gray("  Run 'plab cursor login' to authenticate with Cursor.\n"));
       process.exit(1);
     }
   }
@@ -648,7 +648,7 @@ async function showModelReport(options: FilterOptions & DateFilterOptions & { be
   if (report.entries.length === 0) {
     if (onlyCursor && !cursorSync.synced) {
       console.log(pc.yellow("  No Cursor data available."));
-      console.log(pc.gray("  Run 'tokscale cursor login' to authenticate with Cursor.\n"));
+      console.log(pc.gray("  Run 'plab cursor login' to authenticate with Cursor.\n"));
     } else {
       console.log(pc.yellow("  No usage data found.\n"));
     }
@@ -976,10 +976,10 @@ async function handleWrappedCommand(options: WrappedCommandOptions) {
     });
 
     spinner?.stop();
-    console.log(pc.green(`\n  ✓ Your Tokscale Wrapped image is ready!`));
+    console.log(pc.green(`\n  ✓ Your plab Wrapped image is ready!`));
     console.log(pc.white(`  ${outputPath}`));
     console.log();
-    console.log(pc.gray("  Share it on Twitter/X with #TokscaleWrapped"));
+    console.log(pc.gray("  Share it on Twitter/X with #plabWrapped"));
     console.log();
   } catch (error) {
     if (spinner) {
@@ -1128,7 +1128,7 @@ async function cursorLogin(): Promise<void> {
   const credentials = loadCursorCredentials();
   if (credentials) {
     console.log(pc.yellow("\n  Already logged in to Cursor."));
-    console.log(pc.gray("  Run 'tokscale cursor logout' to sign out first.\n"));
+    console.log(pc.gray("  Run 'plab cursor logout' to sign out first.\n"));
     return;
   }
 
@@ -1205,7 +1205,7 @@ async function cursorStatus(): Promise<void> {
 
   if (!credentials) {
     console.log(pc.yellow("\n  Not logged in to Cursor."));
-    console.log(pc.gray("  Run 'tokscale cursor login' to authenticate.\n"));
+    console.log(pc.gray("  Run 'plab cursor login' to authenticate.\n"));
     return;
   }
 
@@ -1233,7 +1233,7 @@ async function cursorStatus(): Promise<void> {
     }
   } else {
     console.log(pc.red(`  ✗ Session invalid: ${validation.error}`));
-    console.log(pc.gray("  Run 'tokscale cursor login' to re-authenticate."));
+    console.log(pc.gray("  Run 'plab cursor login' to re-authenticate."));
   }
 
   console.log(pc.gray(`\n  Credentials: ${getCursorCredentialsPath()}\n`));

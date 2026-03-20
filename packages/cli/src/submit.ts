@@ -1,5 +1,5 @@
 /**
- * Tokscale CLI Submit Command
+ * plab CLI Submit Command
  * Submits local token usage data to the social platform
  */
 
@@ -53,11 +53,11 @@ export async function submit(options: SubmitOptions = {}): Promise<void> {
   const credentials = loadCredentials();
   if (!credentials) {
     console.log(pc.yellow("\n  Not logged in."));
-    console.log(pc.gray("  Run 'tokscale login' first.\n"));
+    console.log(pc.gray("  Run 'plab login' first.\n"));
     process.exit(1);
   }
 
-  console.log(pc.cyan("\n  Tokscale - Submit Usage Data\n"));
+  console.log(pc.cyan("\n  plab - Submit Usage Data\n"));
 
   console.log(pc.gray("  Scanning local session data..."));
 

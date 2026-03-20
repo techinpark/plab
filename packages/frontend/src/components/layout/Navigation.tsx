@@ -270,7 +270,7 @@ export function Navigation() {
       </NavItemLink>
       <NavItemBase
         as="a"
-        href="https://github.com/junhoyeo/tokscale"
+        href="https://github.com/techinpark/plab"
         target="_blank"
         rel="noopener noreferrer"
         $isActive={false}

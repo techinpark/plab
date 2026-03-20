@@ -19,30 +19,32 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Tokscale - AI Token Usage Tracker & Leaderboard",
-  description: "Track, visualize, and compete on AI coding assistant token usage across Claude Code, Cursor, OpenCode, Codex, and Gemini. The Kardashev Scale for AI Devs.",
-  metadataBase: new URL("https://tokscale.ai"),
+  title: "plab - AI Token Usage Tracker & Leaderboard",
+  description: "Track, visualize, and compete on AI coding assistant token usage across Claude Code, Cursor, OpenCode, Codex, and Gemini. UNLIMITED POTENTIAL for AI Devs.",
+  metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Tokscale - AI Token Usage Tracker & Leaderboard",
-    description: "Track, visualize, and compete on AI coding assistant token usage across Claude Code, Cursor, OpenCode, Codex, and Gemini. The Kardashev Scale for AI Devs.",
+    title: "plab - AI Token Usage Tracker & Leaderboard",
+    description: "Track, visualize, and compete on AI coding assistant token usage across Claude Code, Cursor, OpenCode, Codex, and Gemini. UNLIMITED POTENTIAL for AI Devs.",
     type: "website",
-    url: "https://tokscale.ai",
-    siteName: "Tokscale",
+    url: siteUrl,
+    siteName: "plab",
     images: [
       {
-        url: "https://tokscale.ai/og-image.png",
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Tokscale - AI Token Usage Tracker",
+        alt: "plab - AI Token Usage Tracker",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tokscale - AI Token Usage Tracker & Leaderboard",
+    title: "plab - AI Token Usage Tracker & Leaderboard",
     description: "Track, visualize, and compete on AI coding assistant token usage across Claude Code, Cursor, OpenCode, Codex, and Gemini.",
-    images: ["https://tokscale.ai/og-image.png"],
+    images: [`${siteUrl}/og-image.png`],
   },
 };
 

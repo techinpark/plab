@@ -22,28 +22,29 @@ async function getProfileData(username: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ username: string }> }): Promise<Metadata> {
   const { username } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
   return {
-    title: `@${username} - Token Usage | Tokscale`,
-    description: `View ${username}'s AI token usage statistics and cost breakdown on Tokscale`,
+    title: `@${username} - Token Usage | plab`,
+    description: `View ${username}'s AI token usage statistics and cost breakdown on plab`,
     openGraph: {
-      title: `@${username}'s Token Usage | Tokscale`,
-      description: `AI token usage statistics for ${username} on Tokscale`,
+      title: `@${username}'s Token Usage | plab`,
+      description: `AI token usage statistics for ${username} on plab`,
       type: 'profile',
-      url: `https://tokscale.ai/u/${username}`,
-      siteName: 'Tokscale',
+      url: `${siteUrl}/u/${username}`,
+      siteName: 'plab',
       images: [
         {
-          url: 'https://tokscale.ai/og-image.png',
+          url: `${siteUrl}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: `${username}'s Token Usage on Tokscale`,
+          alt: `${username}'s Token Usage on plab`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `@${username}'s Token Usage | Tokscale`,
-      images: ['https://tokscale.ai/og-image.png'],
+      title: `@${username}'s Token Usage | plab`,
+      images: [`${siteUrl}/og-image.png`],
     },
   };
 }

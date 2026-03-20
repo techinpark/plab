@@ -204,19 +204,19 @@ export function Footer() {
           <LogoContainer>
             <LogoImage
               src="/assets/footer-logo-icon.png"
-              alt="Tokscale Icon"
+              alt="plab Icon"
               fill
             />
           </LogoContainer>
 
-          <LogoLink 
-            href="https://tokscale.ai" 
-            target="_blank" 
+          <LogoLink
+            href={process.env.NEXT_PUBLIC_URL || "/"}
+            target="_blank"
             rel="noopener noreferrer"
           >
             <LogoSvg
               src="/assets/footer-logo.svg"
-              alt="Tokscale"
+              alt="plab"
               width={184}
               height={21}
             />
@@ -226,14 +226,14 @@ export function Footer() {
 
           <TextContainer>
             <CopyrightText>
-              © 2025 Tokscale. All rights reserved.
+              © 2025 plab. All rights reserved.
             </CopyrightText>
-            <GitHubLink 
-              href="https://github.com/junhoyeo/tokscale" 
-              target="_blank" 
+            <GitHubLink
+              href="https://github.com/techinpark/plab"
+              target="_blank"
               rel="noopener noreferrer"
             >
-              github.com/junhoyeo/tokscale
+              github.com/techinpark/plab
             </GitHubLink>
           </TextContainer>
         </ContentContainer>

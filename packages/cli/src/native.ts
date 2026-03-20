@@ -426,7 +426,7 @@ async function runInSubprocess<T>(method: string, args: unknown[]): Promise<T> {
   const runnerPath = join(__dirname, "native-runner.js");
   const input = JSON.stringify({ method, args });
 
-  const tmpDir = join(tmpdir(), "tokscale");
+  const tmpDir = join(tmpdir(), "plab");
   mkdirSync(tmpDir, { recursive: true });
   const inputFile = join(tmpDir, `input-${randomUUID()}.json`);
   

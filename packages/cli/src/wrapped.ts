@@ -127,11 +127,11 @@ const TOKSCALE_LOGO_SVG_URL = "https://tokscale.ai/tokscale-logo.svg";
 const TOKSCALE_LOGO_PNG_SIZE = 400;
 
 function getImageCacheDir(): string {
-  return path.join(os.homedir(), ".cache", "tokscale", "images");
+  return path.join(os.homedir(), ".cache", "plab", "images");
 }
 
 function getFontCacheDir(): string {
-  return path.join(os.homedir(), ".cache", "tokscale", "fonts");
+  return path.join(os.homedir(), ".cache", "plab", "fonts");
 }
 
 async function fetchAndCacheImage(url: string, filename: string): Promise<string> {
@@ -791,7 +791,7 @@ async function generateWrappedImage(data: WrappedData, options: { short?: boolea
     
     ctx.fillStyle = COLORS.textSecondary;
     ctx.font = `${18 * SCALE}px Figtree, sans-serif`;
-    ctx.fillText("github.com/junhoyeo/tokscale", PADDING, footerBottomY);
+    ctx.fillText("github.com/techinpark/plab", PADDING, footerBottomY);
     
     const logoY = footerBottomY - 18 * SCALE - 16 * SCALE - tokscaleLogoHeight;
     ctx.drawImage(tokscaleLogo, PADDING, logoY, logoWidth, tokscaleLogoHeight);
@@ -821,7 +821,7 @@ export async function generateWrapped(options: WrappedOptions): Promise<string> 
     pinSisyphus: options.pinSisyphus,
   });
 
-  const outputPath = options.output || `tokscale-${data.year}-wrapped.png`;
+  const outputPath = options.output || `plab-${data.year}-wrapped.png`;
   const absolutePath = path.resolve(outputPath);
 
   fs.writeFileSync(absolutePath, imageBuffer);
