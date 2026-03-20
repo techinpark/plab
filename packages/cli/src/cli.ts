@@ -95,7 +95,7 @@ function showTUIUnavailableMessage(): void {
   console.log(pc.gray("  OpenTUI's native modules are not compatible with Node.js."));
   console.log();
   console.log(pc.white("  Options:"));
-  console.log(pc.gray("  • Use 'bunx plab' instead of 'npx plab'"));
+  console.log(pc.gray("  • Use 'bunx plabtokens' instead of 'npx plabtokens'"));
   // console.log(pc.gray("  • Use '--light' flag for legacy CLI table output"));
   console.log(pc.gray("  • Use '--json' flag for JSON output"));
   console.log();

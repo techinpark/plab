@@ -36,7 +36,7 @@
 |:---:|:---:|
 | <a href="https://tokscale.ai"><img alt="Frontend (3D Contributions Graph)" src=".github/assets/frontend-contributions-graph.png" width="700px" /></a> | <a href="#wrapped-2025"><img alt="Wrapped 2025" src=".github/assets/wrapped-2025-agents.png" width="700px" /></a> |
 
-> **Run [`bunx tokscale@latest submit`](#social) to submit your usage data to the leaderboard and create your public profile!**
+> **Run [`bunx plabtokens@latest submit`](#social) to submit your usage data to the leaderboard and create your public profile!**
 
 ## Overview
 
@@ -131,17 +131,17 @@ In the age of AI-assisted development, **tokens are the new energy**. They power
 curl -fsSL https://bun.sh/install | bash
 
 # Run directly with bunx
-bunx tokscale@latest
+bunx plabtokens@latest
 
 # Light mode (no OpenTUI, just table rendering)
-bunx tokscale@latest --light
+bunx plabtokens@latest --light
 ```
 
 That's it! This gives you the full interactive TUI experience with zero setup.
 
 > **Requires [Bun](https://bun.sh/)**: The interactive TUI uses OpenTUI's native Zig modules for zero-flicker rendering, which requires the Bun runtime.
 
-> **Package Structure**: `tokscale` is an alias package (like [`swc`](https://www.npmjs.com/package/swc)) that installs `@tokscale/cli`. Both install the same CLI with the native Rust core (`@tokscale/core`) included.
+> **Package Structure**: `plabtokens` is an alias package (like [`swc`](https://www.npmjs.com/package/swc)) that installs `@tokscale/cli`. Both install the same CLI with the native Rust core (`@tokscale/core`) included.
 
 
 ### Prerequisites
@@ -168,7 +168,7 @@ bun install
 bun run cli
 ```
 
-> **Note**: `bun run cli` is for local development. When installed via `bunx tokscale`, the command runs directly. The Usage section below shows the installed binary commands.
+> **Note**: `bun run cli` is for local development. When installed via `bunx plabtokens`, the command runs directly. The Usage section below shows the installed binary commands.
 
 ### Building the Native Module
 
@@ -179,7 +179,7 @@ The native Rust module is **required** for CLI operation. It provides ~10x faste
 bun run build:core
 ```
 
-> **Note**: Native binaries are pre-built and included when you install via `bunx tokscale@latest`. Building from source is only needed for local development.
+> **Note**: Native binaries are pre-built and included when you install via `bunx plabtokens@latest`. Building from source is only needed for local development.
 
 ## Usage
 
@@ -463,7 +463,7 @@ Submitted data goes through Level 1 validation:
 
 Generate a beautiful year-in-review image summarizing your AI coding assistant usage—inspired by Spotify Wrapped.
 
-| `bunx tokscale@latest wrapped` | `bunx tokscale@latest wrapped --clients` | `bunx tokscale@latest wrapped --agents --disable-pinned` |
+| `bunx plabtokens@latest wrapped` | `bunx plabtokens@latest wrapped --clients` | `bunx plabtokens@latest wrapped --agents --disable-pinned` |
 |:---:|:---:|:---:|
 | ![Wrapped 2025 (Agents + Pin Sisyphus)](.github/assets/wrapped-2025-agents.png) | ![Wrapped 2025 (Clients)](.github/assets/wrapped-2025-clients.png) | ![Wrapped 2025 (Agents + Disable Pinned)](.github/assets/wrapped-2025-agents-disable-pinned.png) |
 
@@ -661,7 +661,7 @@ Tokscale fully supports Windows. The TUI and CLI work the same as on macOS/Linux
 powershell -c "irm bun.sh/install.ps1 | iex"
 
 # Run tokscale
-bunx tokscale@latest
+bunx plabtokens@latest
 ```
 
 #### Data Locations on Windows

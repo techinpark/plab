@@ -849,27 +849,27 @@ export default function LeaderboardClient({ initialData }: LeaderboardClientProp
           <CodeLine style={{ backgroundColor: "var(--color-bg-subtle)" }}>
             <CommandPrompt>$</CommandPrompt>
             <CommandPrefix>bunx</CommandPrefix>
-            <CommandName>plab</CommandName>
+            <CommandName>plabtokens</CommandName>
             <CommandArg>login</CommandArg>
             <CopyIconButton
-              onClick={() => handleCopyCommand("bunx plab login")}
-              className={copiedCommand === "bunx plab login" ? "copied" : ""}
+              onClick={() => handleCopyCommand("bunx plabtokens login")}
+              className={copiedCommand === "bunx plabtokens login" ? "copied" : ""}
               aria-label="Copy command"
             >
-              {copiedCommand === "bunx plab login" ? <CheckIcon size={16} /> : <CopyIcon size={16} />}
+              {copiedCommand === "bunx plabtokens login" ? <CheckIcon size={16} /> : <CopyIcon size={16} />}
             </CopyIconButton>
           </CodeLine>
           <CodeLine style={{ backgroundColor: "var(--color-bg-subtle)" }}>
             <CommandPrompt>$</CommandPrompt>
             <CommandPrefix>bunx</CommandPrefix>
-            <CommandName>plab</CommandName>
+            <CommandName>plabtokens</CommandName>
             <CommandArg>submit</CommandArg>
             <CopyIconButton
-              onClick={() => handleCopyCommand("bunx plab submit")}
-              className={copiedCommand === "bunx plab submit" ? "copied" : ""}
+              onClick={() => handleCopyCommand("bunx plabtokens submit")}
+              className={copiedCommand === "bunx plabtokens submit" ? "copied" : ""}
               aria-label="Copy command"
             >
-              {copiedCommand === "bunx plab submit" ? <CheckIcon size={16} /> : <CopyIcon size={16} />}
+              {copiedCommand === "bunx plabtokens submit" ? <CheckIcon size={16} /> : <CopyIcon size={16} />}
             </CopyIconButton>
           </CodeLine>
         </CodeBlock>

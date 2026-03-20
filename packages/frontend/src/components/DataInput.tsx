@@ -354,7 +354,7 @@ export function DataInput({ onDataLoaded }: DataInputProps) {
           <ListItem>
             Install plab:{" "}
             <SmallCodeSnippet>
-              bunx plab
+              bunx plabtokens
             </SmallCodeSnippet>
           </ListItem>
           <ListItem>

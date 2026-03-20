@@ -10,7 +10,7 @@ export function BlackholeHero() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("bunx plab");
+    navigator.clipboard.writeText("bunx plabtokens");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -59,7 +59,7 @@ export function BlackholeHero() {
                 bunx&nbsp;
               </CommandPrefix>
               <CommandName>
-                plab
+                plabtokens
               </CommandName>
             </CommandTextWrapper>
             <GradientSeparator />
