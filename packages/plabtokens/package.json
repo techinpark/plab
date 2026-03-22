@@ -1,9 +1,9 @@
 {
   "name": "plabtokens",
-  "version": "1.0.22",
+  "version": "1.0.24",
   "description": "AI Token Usage Tracker & Leaderboard CLI — Track, visualize, and compete on AI coding assistant token usage across Claude Code, Cursor, OpenCode, Codex, and Gemini.",
   "type": "module",
-  "main": "index.js",
+  "main": "./dist/cli.js",
   "bin": {
     "plabtokens": "./bin.js",
     "plab": "./bin.js"
@@ -11,14 +11,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techinpark/tokscale.git"
+    "url": "git+https://github.com/techinpark/plab.git"
   },
   "bugs": {
-    "url": "https://github.com/techinpark/tokscale/issues"
+    "url": "https://github.com/techinpark/plab/issues"
   },
   "homepage": "https://plab-tokens.vercel.app",
   "keywords": [
     "plab",
+    "plabtokens",
     "token",
     "tracker",
     "ai",
@@ -30,14 +31,35 @@
     "leaderboard"
   ],
   "dependencies": {
-    "@tokscale/cli": "1.0.22"
+    "@napi-rs/canvas": "^0.1.68",
+    "@opentui/core": "0.1.60",
+    "@opentui/react": "^0.1.60",
+    "@opentui/solid": "^0.1.60",
+    "@resvg/resvg-js": "^2.6.2",
+    "@tokscale/core": "1.0.22",
+    "cli-table3": "^0.6.5",
+    "clipboardy": "^5.0.2",
+    "commander": "^14.0.2",
+    "csv-parse": "^5.6.0",
+    "date-fns": "^4.1.0",
+    "picocolors": "^1.1.1",
+    "react": "^19.2.3",
+    "solid-js": "1.9.9",
+    "string-width": "^8.1.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "files": [
-    "index.js",
+    "dist/**/*",
+    "src/**/*",
     "bin.js"
-  ]
+  ],
+  "engines": {
+    "bun": ">= 1.0"
+  },
+  "scripts": {
+    "prepublish:copy": "cp -r ../cli/dist ./dist && cp -r ../cli/src ./src"
+  }
 }
